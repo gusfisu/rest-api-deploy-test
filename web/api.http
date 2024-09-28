@@ -1,0 +1,59 @@
+### rest client
+### archivo con .http para pruebas api
+### PORTADA
+GET http://localhost:1234/
+
+
+### Recuperar todas las pelis
+GET http://localhost:1234/movies
+
+### Recuperar todas las pelis por id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar por genero
+### diferentes extrategias
+### todo url o recurso o con params/filtro
+#GET http://localhost:1234/movies/genre/1
+GET http://localhost:1234/movies?genre=Sci-Fi
+
+
+### Crear una peli
+# POST http://localhost:1234/movies
+# Content-Type: application/json
+
+# {
+#   "title": "The Matrix",
+#   "year": "1999",
+#   "director": "Lana wachowski",
+#   "genre": "ACTION",
+# }
+
+### Crear una peli
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "sql": "select * from users",
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ]
+
+}
+
+
+### Actualizar una peli
+
+### SI ES PELI ENTERA   PUT
+### SI ES PARTE DE PELI PATCH
+PATCH http://localhost:1234/movies/2e6900e2-0b48-4fb6-ad48-09c7086e54fe
+Content-Type: application/json
+
+{
+  "year": 1956
+}
