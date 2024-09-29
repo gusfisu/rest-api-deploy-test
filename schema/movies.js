@@ -1,4 +1,4 @@
-const z = require('zod')
+import z from 'zod'
 
 // validamos aqui por aprendizaje, lo suyo es tener
 // una carpeta de validaciones/schema
@@ -30,21 +30,16 @@ const moviesSchema = z.object({
 
 })
 
-function validateMovie (object) {
+export function validateMovie (object) {
   // return moviesSchema.parse(object)//es mas rollo por tene q mete try cath
   return moviesSchema.safeParse(object)// devuelve objeto resove si hay o no datos, con un if solo
   // return moviesSchema.safeParseAsync(object)// version async
 }
 
-function validatePartialMovie (object) {
+export function validatePartialMovie (object) {
   // partial sirve para q cada propidad de esquema de validacion
   // sea opcional de forma q si no esta la propiedad no la valida ni modifica
   // pero si esta, valida solo las que llegan con la validacion q le corresponda sin
   // tener q validar el resto
   return moviesSchema.partial().safeParse(object)
-}
-
-module.exports = {
-  validateMovie,
-  validatePartialMovie
 }

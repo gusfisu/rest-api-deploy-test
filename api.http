@@ -55,5 +55,8 @@ PATCH http://localhost:1234/movies/2e6900e2-0b48-4fb6-ad48-09c7086e54fe
 Content-Type: application/json
 
 {
-  "year": 1956
+  "year": 1957
 }
+
+### Borrar peli
+DELETE http://localhost:1234/movies/2e6900e2-0b48-4fb6-ad48-09c7086e54fe
