@@ -1,14 +1,15 @@
+### ESTE PLUGIN SIRVE PARA DOCUMENTAR Y PROBAR PETICIONES
 ### rest client
 ### archivo con .http para pruebas api
-### PORTADA
-GET http://localhost:1234/
+# ### PORTADA
+# GET http://localhost:1234/
 
 
 ### Recuperar todas las pelis
 GET http://localhost:1234/movies
 
 ### Recuperar todas las pelis por id
-GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET http://localhost:1234/movies/f2e144cb-8830-11ef-81e7-9890969c6129
 
 ### Recuperar por genero
 ### diferentes extrategias
@@ -34,7 +35,7 @@ Content-Type: application/json
 
 {
   "sql": "select * from users",
-  "title": "The Godfather",
+  "title": "miduborrar",
   "year": 1975,
   "director": "Francis Ford Coppola",
   "duration": 175,
@@ -51,12 +52,12 @@ Content-Type: application/json
 
 ### SI ES PELI ENTERA   PUT
 ### SI ES PARTE DE PELI PATCH
-PATCH http://localhost:1234/movies/2e6900e2-0b48-4fb6-ad48-09c7086e54fe
+PATCH http://localhost:1234/movies/381b3856-882f-11ef-81e7-9890969c6129
 Content-Type: application/json
 
 {
-  "year": 1957
+  "year": 1989
 }
 
 ### Borrar peli
-DELETE http://localhost:1234/movies/2e6900e2-0b48-4fb6-ad48-09c7086e54fe
+DELETE http://localhost:1234/movies/f2e144cb-8830-11ef-81e7-9890969c6129
